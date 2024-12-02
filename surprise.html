@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🎉 Memory Quiz! 🎉</h1>
+    
+    <div id="quiz-container">
+        <div id="question-container">
+            <p id="question"></p>
+        </div>
+        <div id="options-container">
+            <button class="quiz-option" onclick="checkAnswer(0)">Option 1</button>
+            <button class="quiz-option" onclick="checkAnswer(1)">Option 2</button>
+            <button class="quiz-option" onclick="checkAnswer(2)">Option 3</button>
+        </div>
+    </div>
+
+    <!-- Custom Modal -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <!-- Final "Touch Me" button -->
+    <div id="end-quiz-container" style="display: none;">
+        <button class="surprise-button" onclick="redirectToNextPage()">💝💝Touch Me🥰🥰</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
+

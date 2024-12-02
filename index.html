@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy-Birth-Day</title>
+</head>
+
+<body>
+    <p class="home-page-text">
+        ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+    </p>
+    <div class="home-page-img">
+        <img class="img1" src="photos/img (1).jpg" alt="Birth-Day Girl">
+    </div>
+    <div>
+        <p class="home-page-text">
+            ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+            <br>
+            <br>Wedua bateweleghi destaye neber gn keteweledsh ayqer!
+            <br>
+            Cheq Amet Nurileghe 🥰🥰🥰
+            <br><br>
+            <span class="hbd">Happy Birth Day😘</span>
+            <br><br>
+            Ategebesh Hoghae mnm baladergeleshim Yehen Ende Gift Eneho Beyeshalw.
+            <br><br>
+            ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+        </p>
+    </div>
+    <div class="Button">
+        <a href="#" class="login-link">
+            <button class="surprise-button">💝💝Touch Me🥰🥰</button>
+        </a>
+    </div>
+
+    <!-- Login/Incorrect Password Modal -->
+    <div id="loginModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Login</h2>
+            <input type="password" id="modalPassword" placeholder="Enter Password" />
+            <button onclick="checkPassword()">Login</button>
+
+        </div>
+    </div>
+    <script>
+        // Modal Handling
+        const modal = document.getElementById('loginModal');
+        const loginLink = document.querySelector('.login-link');  // "Touch Me" button link
+        const closeBtn = document.querySelector('.close');
+        const modalTitle = document.getElementById('modalTitle');
+        // const tryAgainButton = document.getElementById('tryAgainButton');
+
+        // Open Modal when the "Touch Me" button is clicked
+        loginLink.addEventListener('click', function (event) {
+            event.preventDefault();  // Prevent the default link action
+            modal.style.display = 'flex';  // Display the login modal
+            resetModal();  // Reset to initial login state
+        });
+
+        // Close Modal when the close button (X) is clicked
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';  // Hide the modal
+        });
+
+        // Password Check Function
+        function checkPassword() {
+            const password = document.getElementById('modalPassword').value;
+            const correctPassword = '70316578Blen';  // Replace with your desired password
+
+            if (password === correctPassword) {
+                window.location.href = 'surprise.html';  // Redirect to the surprise page
+            } else {
+                showIncorrectPassword();
+            }
+        }
+
+        // Show Incorrect Password message
+        function showIncorrectPassword() {
+            modalTitle.textContent = 'Yeteseteshin Muyee Duzz';
+            incorrectMessage.style.display = 'block';
+            tryAgainButton.style.display = 'block';
+            document.getElementById('modalPassword').style.display = 'none';  // Hide the password input
+            document.querySelector('button').style.display = 'none';  // Hide the login button
+        }
+
+        // Reset the modal to initial state (for retry)
+        function resetModal() {
+            modalTitle.textContent = 'Login';
+            incorrectMessage.style.display = 'none';
+            tryAgainButton.style.display = 'none';
+            document.getElementById('modalPassword').style.display = 'block';  // Show the password input again
+            document.querySelector('button').style.display = 'block';  // Show the login button again
+        }
+
+        // Close the modal if clicking outside of it
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';  // Close the modal
+            }
+        };
+
+    </script>
+</body>
+
+</html>
