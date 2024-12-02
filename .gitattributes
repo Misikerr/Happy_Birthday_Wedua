@@ -1,3 +1,0 @@
-hbd/**/*.png filter=lfs diff=lfs merge=lfs -text
-hbd/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
-hbd/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
